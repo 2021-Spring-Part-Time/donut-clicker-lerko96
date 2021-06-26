@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donut Clicker</title>
-  </head>
-  <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+		<link rel="stylesheet" href="index.css" />
+		<title>Donut Clicker</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="dropdown">
+					<button class="dropBtn">Contact</button>
+					<div class="dropContent">
+						<p>
+							Fred the Baker Baking Company <br />
+							1234 drury lane <br />
+							216-248-2482 <br />
+						</p>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropBtn">About Company</button>
+					<div class="dropContent">
+						<p>
+							Created in 1945 by the muffin man <br />
+							only wanting the seweetest baked goods,
+							<br />
+							muffin man has a problem with cavities.
+						</p>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropBtn">About Dev</button>
+					<div class="dropContent">
+						<p>
+							github <br />
+							linkedin
+						</p>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="container">
+					<div class="donuts">
+						<h1>Donut Clicker</h1>
+						<div id="myDonuts">
+							<p id="donutCount">0 donuts</p>
+						</div>
+						<button class="donutClickerBtn">Make dough</button>
+					</div>
+					<div class="shop">
+						<h2>Auto Clickers</h2>
+						<div id="myClickers">
+							<p id="numClickers">Own: 0 clickerz</p>
+							<p id="clickerPrice">Price: 100 donuts</p>
+						</div>
+						<button class="buyClickerBtn">Buy Auto Clicker</button>
+					</div>
+					<div class="shop">
+						<h2>Donut Multipliers</h2>
+						<div id="myMultipliers">
+							<p id="numMultipliers">Own: 0 multiplierz</p>
+							<p id="multiplierPrice">Price: 10 donuts</p>
+						</div>
+						<button class="buyMultiplierBtn">Buy Multiplier</button>
+					</div>
+				</div>
+			</main>
+		</div>
+		<script src="./index.js"></script>
+	</body>
 </html>
