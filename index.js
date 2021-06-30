@@ -1,6 +1,7 @@
 import DonutMaker from './DonutMaker';
-// const container = (document.querySelector('.container')),
-// myContainerDiv = document.getElementById('container');
+const container = (document.querySelector('.container')),
+myContainerDiv = document.getElementById('container');
+
 const donutGame = new DonutMaker(0, 0, 100, 0, 10, 1, 1);
 
 const donutClickerBtn = document.querySelector('.donutClickerBtn'),
@@ -12,57 +13,66 @@ const buyClickerBtn = document.querySelector('.buyClickerBtn'),
 const buyMultiplierBtn = document.querySelector('.buyMultiplierBtn'),
 	myMultipliersDiv = document.getElementById('myMultipliers');
 
-// myContainerDiv.
-// function disableBtn() {
-// 	clickerCost = 0;
-// 	switch (donutGame.buyClickerBtn.disabled) {
-// 		case donutGame.clickerCost > donutGame.donutCount:
-// 			document.getElementById('.buyClickerBtn').disabled = false;
-// 			break;
-// 		default:
-// 			document.getElementById('.buyClickerBtn').disabled = true;
-// 	}
-// }
+const resetGameBtn = document.querySelector('.resetGameBtn'),
+	footContainerDiv = document.getElementById('footContainer');
+
+container.addEventListener('onchange', () => {
+	console.log('change event');
+	donutGame.findDonutCount();
+	myDonutsDiv.appendChild(donutCount);
+	donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
+})
 
 donutClickerBtn.addEventListener('click', () => {
 	donutGame.click();
 	myDonutsDiv.appendChild(donutCount);
-	donutCount.innerText = donutGame.donutCount + ' donuts';
+	donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
+	myDonutsDiv.appendChild(clickerValue);
+	clickerValue.innerText = 'donuts made per click: ' + donutGame.clickValue.toFixed(3);
 });
 
 buyClickerBtn.addEventListener('click', () => {
-	console.log(' clicker event ');
-	// donutGame.disableBtn();
 	if (donutGame.donutCount >= donutGame.clickerCost) {
+		console.log('clicker purchase: granted')
 		donutGame.addClicker();
 		myDonutsDiv.appendChild(donutCount);
-		donutCount.innerText = donutGame.donutCount + ' donuts';
+		donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
+		myDonutsDiv.appendChild(clickerValue);
+		clickerValue.innerText =
+			'donuts made per click: ' + donutGame.clickValue.toFixed(3);
 		myClickersDiv.appendChild(numClickers);
 		numClickers.innerText = 'Own: ' + donutGame.clickerCount + ' clickers';
 		myClickersDiv.appendChild(clickerPrice);
-		clickerPrice.innerText = 'Price: ' + donutGame.clickerCost + ' donuts';
+		clickerPrice.innerText = 'Price: ' + donutGame.clickerCost.toFixed(2) + ' donuts';
 		document.getElementById('.buyClickerBtn').disabled = false;
 	} else if (donutGame.donutCount < donutGame.clickerCost) {
+		console.log('clicker purchase: denied')
 		return (document.getElementById('.buyClickerBtn').disabled = true);
 	}
-
-	// donutGame.findClickerCount();
 });
 
 buyMultiplierBtn.addEventListener('click', () => {
 	console.log('multiplier event ');
-	// if (donutGame.donutCount < donutGame.multiplierCost) {
-	//   return (document.getElementById('.buyMultiplierBtn').disabled = true);
-	// } else if (donutGame.donutCount >= donutGame.multiplierCost) {
-	donutGame.addMultiplier();
-	myDonutsDiv.appendChild(donutCount);
-	donutCount.innerText = donutGame.donutCount + ' donuts';
-	myMultipliersDiv.appendChild(numMultipliers);
-	numMultipliers.innterText =
-		'Own: ' + donutGame.multiplierCount + ' multipliers';
-	myMultipliersDiv.appendChild(multiplierPrice);
-	multiplierPrice.innterText =
-		'Price: ' + donutGame.multiplierCost + ' donuts';
-	//   return (document.getElementById('.buyMultiplierBtn').disabled = false);
-	// }
+	if (donutGame.donutCount >= donutGame.multiplierCost) {
+		donutGame.addMultiplier();
+		myDonutsDiv.appendChild(donutCount);
+		donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
+		myDonutsDiv.appendChild(clickerValue);
+		clickerValue.innerText =
+			'donuts made per click: ' + donutGame.clickValue.toFixed(3);
+		myMultipliersDiv.appendChild(numMultipliers);
+		numMultipliers.innerText =
+			'Own: ' + donutGame.multiplierCount + ' multipliers';
+		myMultipliersDiv.appendChild(multiplierPrice);
+		multiplierPrice.innerText =
+			'Price: ' + donutGame.multiplierCost.toFixed(2) + ' donuts';
+		document.getElementById('.buyMultiplierBtn').disabled = false;
+	} else if (donutGame.donutCount < donutGame.multiplierCost) {
+		return (document.getElementById('.buyMultiplierBtn').disabled = true);
+	}
 });
+
+resetGameBtn.addEventListener('click', () => {
+	console.log(' reset game event ');
+	return donutGame.reset();
+})

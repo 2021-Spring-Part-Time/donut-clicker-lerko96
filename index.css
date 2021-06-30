@@ -2,6 +2,13 @@ header {
 	text-align: center;
 }
 
+.donutClickerBtn {
+	height: 5rem;
+	background-image: url(/img/donut.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 .container {
 	display: flex;
 	text-align: center;

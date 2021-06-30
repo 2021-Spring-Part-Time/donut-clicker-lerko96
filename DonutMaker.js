@@ -54,7 +54,7 @@ class DonutMaker {
 			this.multiplierCost =
 				this.multiplierCost * 0.1 + this.multiplierCost;
 			this.clickValue =
-				this.clickValue * 0.2 ** this.multiplierCount + this.clickValue;
+				1.2 ** this.multiplierCount;
 		}
 	}
 }
