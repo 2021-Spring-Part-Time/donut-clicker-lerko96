@@ -16,11 +16,13 @@ const buyMultiplierBtn = document.querySelector('.buyMultiplierBtn'),
 const resetGameBtn = document.querySelector('.resetGameBtn'),
 	footContainerDiv = document.getElementById('footContainer');
 
-container.addEventListener('onchange', () => {
+container.addEventListener('mouseover', () => {
 	console.log('change event');
 	donutGame.findDonutCount();
 	myDonutsDiv.appendChild(donutCount);
-	donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
+	donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';	myDonutsDiv.appendChild(clickerValue);
+	clickerValue.innerText = 'donuts made per click: ' + donutGame.clickValue.toFixed(3);
+
 })
 
 donutClickerBtn.addEventListener('click', () => {
@@ -74,5 +76,5 @@ buyMultiplierBtn.addEventListener('click', () => {
 
 resetGameBtn.addEventListener('click', () => {
 	console.log(' reset game event ');
-	return donutGame.reset();
+	return new DonutMaker;
 })

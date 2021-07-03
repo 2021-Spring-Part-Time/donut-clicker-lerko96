@@ -2,6 +2,12 @@ header {
 	text-align: center;
 }
 
+
+#myDonuts {
+	text-align: right;
+	background-color: red;
+}
+
 .donutClickerBtn {
 	height: 5rem;
 	background-image: url(/img/donut.jpg);
