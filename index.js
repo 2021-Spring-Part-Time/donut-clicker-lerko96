@@ -1,8 +1,8 @@
 import DonutMaker from './DonutMaker';
-const container = (document.querySelector('.container')),
-myContainerDiv = document.getElementById('container');
+const container = document.querySelector('.container'),
+	myContainerDiv = document.getElementById('container');
 
-const donutGame = new DonutMaker(0, 0, 100, 0, 10, 1, 1);
+const donutGame = new DonutMaker(0, 0, 100, 0, 10, 1, 0);
 
 const donutClickerBtn = document.querySelector('.donutClickerBtn'),
 	myDonutsDiv = document.getElementById('myDonuts');
@@ -20,22 +20,28 @@ container.addEventListener('mouseover', () => {
 	console.log('change event');
 	donutGame.findDonutCount();
 	myDonutsDiv.appendChild(donutCount);
-	donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';	myDonutsDiv.appendChild(clickerValue);
-	clickerValue.innerText = 'donuts made per click: ' + donutGame.clickValue.toFixed(3);
-
-})
+	donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
+	myDonutsDiv.appendChild(clickerValue);
+	clickerValue.innerText =
+		'donuts made per click: ' + donutGame.clickValue.toFixed(3);
+	myDonutsDiv.appendChild(cps);
+	cps.innerText = 'clicks per second: ' + donutGame.cps;
+});
 
 donutClickerBtn.addEventListener('click', () => {
 	donutGame.click();
 	myDonutsDiv.appendChild(donutCount);
 	donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
 	myDonutsDiv.appendChild(clickerValue);
-	clickerValue.innerText = 'donuts made per click: ' + donutGame.clickValue.toFixed(3);
+	clickerValue.innerText =
+		'donuts made per click: ' + donutGame.clickValue.toFixed(3);
+	myDonutsDiv.appendChild(cps);
+	cps.innerText = 'clicks per second: ' + donutGame.cps;
 });
 
 buyClickerBtn.addEventListener('click', () => {
 	if (donutGame.donutCount >= donutGame.clickerCost) {
-		console.log('clicker purchase: granted')
+		console.log('clicker purchase: granted');
 		donutGame.addClicker();
 		myDonutsDiv.appendChild(donutCount);
 		donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
@@ -45,10 +51,14 @@ buyClickerBtn.addEventListener('click', () => {
 		myClickersDiv.appendChild(numClickers);
 		numClickers.innerText = 'Own: ' + donutGame.clickerCount + ' clickers';
 		myClickersDiv.appendChild(clickerPrice);
-		clickerPrice.innerText = 'Price: ' + donutGame.clickerCost.toFixed(2) + ' donuts';
+		clickerPrice.innerText =
+			'Price: ' + donutGame.clickerCost.toFixed(2) + ' donuts';
+		myDonutsDiv.appendChild(cps);
+		cps.innerText = 'clicks per second: ' + donutGame.cps;
+
 		document.getElementById('.buyClickerBtn').disabled = false;
 	} else if (donutGame.donutCount < donutGame.clickerCost) {
-		console.log('clicker purchase: denied')
+		console.log('clicker purchase: denied');
 		return (document.getElementById('.buyClickerBtn').disabled = true);
 	}
 });
@@ -68,6 +78,9 @@ buyMultiplierBtn.addEventListener('click', () => {
 		myMultipliersDiv.appendChild(multiplierPrice);
 		multiplierPrice.innerText =
 			'Price: ' + donutGame.multiplierCost.toFixed(2) + ' donuts';
+		myDonutsDiv.appendChild(cps);
+		cps.innerText = 'clicks per second: ' + donutGame.cps;
+
 		document.getElementById('.buyMultiplierBtn').disabled = false;
 	} else if (donutGame.donutCount < donutGame.multiplierCost) {
 		return (document.getElementById('.buyMultiplierBtn').disabled = true);
@@ -76,5 +89,15 @@ buyMultiplierBtn.addEventListener('click', () => {
 
 resetGameBtn.addEventListener('click', () => {
 	console.log(' reset game event ');
-	return new DonutMaker;
-})
+	donutGame.resetGame();
+	// myDonutsDiv.appendChild(donutCount);
+	// donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
+	// myDonutsDiv.appendChild(clickerValue);
+	// clickerValue.innerText =
+	// 	'donuts made per click: ' + donutGame.clickValue.toFixed(3);
+	// myClickersDiv.appendChild(numClickers);
+	// numClickers.innerText = 'Own: ' + donutGame.clickerCount + ' clickers';
+	// myClickersDiv.appendChild(clickerPrice);
+	// clickerPrice.innerText =
+	// 	'Price: ' + donutGame.clickerCost.toFixed(2) + ' donuts';
+});

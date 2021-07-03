@@ -2,10 +2,19 @@ header {
 	text-align: center;
 }
 
+body {
+	background-color: #E9C46A;
+	font-size: 15px;
+
+}
+
+h1, h2, h3 {
+	color: #264653;
+}
+
 
 #myDonuts {
 	text-align: right;
-	background-color: red;
 }
 
 .donutClickerBtn {
@@ -15,10 +24,27 @@ header {
 	background-repeat: no-repeat;
 }
 
+.buyClickerBtn {
+	margin-top: 2.5rem;
+	height: 5rem;
+	width: 7rem;
+	overflow: auto;
+}
+
+.buyMultiplierBtn {
+	margin-top: 2.5rem;
+	height: 5rem;
+	width: 7rem;
+	overflow: auto;
+
+}
+
 .container {
 	display: flex;
 	text-align: center;
 	justify-content: space-around;
+	height: 500px;
+	align-items: center;
 }
 .dropdown {
 	position: relative;
@@ -26,7 +52,7 @@ header {
 }
 
 .dropBtn {
-	background-color: #04aa6d;
+	background-color: #2A9D8F;
 	color: white;
 	padding: 1rem;
 	font-size: 16px;

@@ -53,9 +53,20 @@ class DonutMaker {
 			this.multiplierCount++;
 			this.multiplierCost =
 				this.multiplierCost * 0.1 + this.multiplierCost;
-			this.clickValue =
-				1.2 ** this.multiplierCount;
+			this.clickValue = 1.2 ** this.multiplierCount;
 		}
+	}
+
+	resetGame() {
+		// this.donutCount = 0;
+		// this.clickerCount = 0;
+		// this.clickerCost = 100;
+		// this.multiplierCount = 0;
+		// this.multiplierCost = 10;
+		// this.clickValue = 1;
+		// this.cps = 1;
+		location.reload();
+		return false;
 	}
 }
 
