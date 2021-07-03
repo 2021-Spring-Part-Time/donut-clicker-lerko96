@@ -6,7 +6,7 @@ class DonutMaker {
 		multiplierCount,
 		multiplierCost,
 		clickValue,
-		cps
+		cps, autoCPS
 	) {
 		this.donutCount = donutCount;
 		this.clickerCount = clickerCount;
@@ -15,10 +15,11 @@ class DonutMaker {
 		this.multiplierCost = multiplierCost;
 		this.clickValue = clickValue;
 		this.cps = cps;
+		this.autoCPS = autoCPS;
 	}
 
 	click() {
-		console.log('donut made');
+		console.log('donut click');
 		this.donutCount += this.clickValue;
 	}
 
@@ -35,8 +36,8 @@ class DonutMaker {
 			this.donutCount -= this.clickerCost;
 			this.clickerCount++;
 			this.clickerCost = this.clickerCost * 0.1 + this.clickerCost;
-			// this.clickValue = this.clickValue;
 			this.cps++;
+			this.autoCPS = this.clickerCount * this.clickValue;
 		}
 		setInterval(() => {
 			this.click();
@@ -54,31 +55,14 @@ class DonutMaker {
 			this.multiplierCost =
 				this.multiplierCost * 0.1 + this.multiplierCost;
 			this.clickValue = 1.2 ** this.multiplierCount;
+			this.autoCPS = this.clickerCount * this.clickValue;
 		}
 	}
 
 	resetGame() {
-		// this.donutCount = 0;
-		// this.clickerCount = 0;
-		// this.clickerCost = 100;
-		// this.multiplierCount = 0;
-		// this.multiplierCost = 10;
-		// this.clickValue = 1;
-		// this.cps = 1;
 		location.reload();
 		return false;
 	}
 }
-
-// function counter() {
-// 	i = 0;
-// 	var clicksPerSecond = function () {
-// 		if (i == 100) clearInterval(this);
-// 		else console.log('Currently at ' + i++);
-// 	};
-
-// 	setInterval(clicksPerSecond, 1000);
-// 	clicksPerSecond();
-// }
 
 export default DonutMaker;

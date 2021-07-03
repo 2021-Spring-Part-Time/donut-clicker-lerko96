@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 		<link rel="stylesheet" href="index.css" />
 		<title>Donut Clicker</title>
 	</head>
@@ -48,32 +47,44 @@
 						<h1>Donut Clicker</h1>
 						<div id="myDonuts">
 							<p id="donutCount">0.00 donuts</p>
-							<p id="clickerValue">donuts made per click: 1.000</p>
+							<p id="clickerValue">
+								donuts made per click: 1.000
+							</p>
 							<p id="cps">clicks per second: 0</p>
 						</div>
-						<button class="donutClickerBtn">Make dough</button>
+						<button class="donutClickerBtn"></button>
 					</div>
-					<div class="shop">
+					<div class="shops">
+						<h2>Multipliers</h2>
+						<div class="shop">
+							<button class="buyMultiplierBtn">
+								Buy Multiplier
+							</button>
+							<div id="myMultipliers">
+								<p id="numMultipliers">Own: 0 multipliers</p>
+								<p id="multiplierPrice">Price: 10 donuts</p>
+							</div>
+						</div>
 						<h2>Auto Clickers</h2>
-						<div id="myClickers">
-							<p id="numClickers">Own: 0 clickerz</p>
-							<p id="clickerPrice">Price: 100 donuts</p>
+						<div class="shop">
+							<button class="buyClickerBtn">
+								Buy Auto Clicker
+							</button>
+							<div id="myClickers">
+								<p id="numClickers">Own: 0 clickers</p>
+								<p id="numAutoCPS">
+									Total Auto Clicker Donuts Per Second: 0
+								</p>
+								<p id="clickerPrice">Price: 100 donuts</p>
+							</div>
 						</div>
-						<button class="buyClickerBtn">Buy Auto Clicker</button>
-					</div>
-					<div class="shop">
-						<h2>Donut Multipliers</h2>
-						<div id="myMultipliers">
-							<p id="numMultipliers">Own: 0 multiplierz</p>
-							<p id="multiplierPrice">Price: 10 donuts</p>
-						</div>
-						<button class="buyMultiplierBtn">Buy Multiplier</button>
 					</div>
 				</div>
 			</main>
 			<footer>
-				<div id="footContainer"></div>
-				<button class="resetGameBtn">Reset Game</button>
+				<div id="footContainer">
+					<button class="resetGameBtn">Reset Game</button>
+				</div>
 			</footer>
 		</div>
 		<script src="./index.js"></script>
