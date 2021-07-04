@@ -48,14 +48,14 @@ buyClickerBtn.addEventListener('click', () => {
 		clickerValue.innerText =
 			'donuts made per click: ' + donutGame.clickValue.toFixed(3);
 		myClickersDiv.appendChild(numClickers);
-		numClickers.innerText = 'Own: ' + donutGame.clickerCount + ' clickers';
+		numClickers.innerText = 'Clickers: ' + donutGame.clickerCount;
+		myClickersDiv.appendChild(clickerPrice);
+		clickerPrice.innerText =
+		'Cost: ' + donutGame.clickerCost.toFixed(2) + ' Donuts';
 		myClickersDiv.appendChild(numAutoCPS);
 		numAutoCPS.innerText =
 			'Total Auto Clicker Donuts Per Second: ' +
 			donutGame.autoCPS.toFixed(3);
-		myClickersDiv.appendChild(clickerPrice);
-		clickerPrice.innerText =
-			'Price: ' + donutGame.clickerCost.toFixed(2) + ' donuts';
 		myDonutsDiv.appendChild(cps);
 		cps.innerText = 'clicks per second: ' + donutGame.cps;
 		document.getElementById('.buyClickerBtn').disabled = false;
@@ -76,21 +76,21 @@ buyMultiplierBtn.addEventListener('click', () => {
 			'donuts made per click: ' + donutGame.clickValue.toFixed(3);
 		myMultipliersDiv.appendChild(numMultipliers);
 		numMultipliers.innerText =
-			'Own: ' + donutGame.multiplierCount + ' multipliers';
+			'Multipliers: ' + donutGame.multiplierCount;
 		myMultipliersDiv.appendChild(multiplierPrice);
 		multiplierPrice.innerText =
-			'Price: ' + donutGame.multiplierCost.toFixed(2) + ' donuts';
+			'Cost: ' + donutGame.multiplierCost.toFixed(2) + ' donuts';
 		myDonutsDiv.appendChild(cps);
 		cps.innerText = 'clicks per second: ' + donutGame.cps;
 		myClickersDiv.appendChild(numClickers);
-		numClickers.innerText = 'Own: ' + donutGame.clickerCount + ' clickers';
+		numClickers.innerText = 'Auto Clickers: ' + donutGame.clickerCount;
+		myClickersDiv.appendChild(clickerPrice);
+		clickerPrice.innerText =
+		'Cost: ' + donutGame.clickerCost.toFixed(2) + ' Donuts';
 		myClickersDiv.appendChild(numAutoCPS);
 		numAutoCPS.innerText =
 			'Total Auto Clicker Donuts Per Second: ' +
 			donutGame.autoCPS.toFixed(3);
-		myClickersDiv.appendChild(clickerPrice);
-		clickerPrice.innerText =
-			'Price: ' + donutGame.clickerCost.toFixed(2) + ' donuts';
 		document.getElementById('.buyMultiplierBtn').disabled = false;
 	} else if (donutGame.donutCount < donutGame.multiplierCost) {
 		console.log('multiplier purchase: DENIED');
