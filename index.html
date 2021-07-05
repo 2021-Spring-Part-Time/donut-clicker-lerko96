@@ -4,7 +4,6 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
 		<link rel="stylesheet" href="index.css" />
 		<title>Donut Clicker</title>
 	</head>
@@ -45,35 +44,56 @@
 			<main>
 				<div class="container">
 					<div class="donuts">
-						<h1>Donut Clicker</h1>
 						<div id="myDonuts">
+							<h1>Donut Clicker</h1>
 							<p id="donutCount">0.00 donuts</p>
-							<p id="clickerValue">donuts made per click: 1.000</p>
-							<p id="cps">clicks per second: 0</p>
+							<p id="clickerValue">1.000 donuts per click</p>
+							<p id="clickerCountOne">0 auto clickers</p>
+							<p id="numAutoCPS">per second: 0</p>
 						</div>
-						<button class="donutClickerBtn">Make dough</button>
+						<button class="donutClickerBtn"></button>
 					</div>
-					<div class="shop">
-						<h2>Auto Clickers</h2>
-						<div id="myClickers">
-							<p id="numClickers">Own: 0 clickerz</p>
-							<p id="clickerPrice">Price: 100 donuts</p>
+					<div class="shops">
+						<div class="shop">
+							<div id="myMultipliers">
+								<h2 id="numMultipliers">Multipliers: 0</h2>
+								<button
+									class="buyMultiplierBtn"
+									id="multiplierPrice"
+								>
+									Cost: 10 donuts
+								</button>
+							</div>
 						</div>
-						<button class="buyClickerBtn">Buy Auto Clicker</button>
-					</div>
-					<div class="shop">
-						<h2>Donut Multipliers</h2>
-						<div id="myMultipliers">
-							<p id="numMultipliers">Own: 0 multiplierz</p>
-							<p id="multiplierPrice">Price: 10 donuts</p>
+						<div class="shop">
+							<div id="myClickers">
+								<h2 id="numClickers">Auto Clickers: 0</h2>
+								<div id="clickerDrop" class="clickerDrop">
+									<button
+										class="buyClickerBtn"
+										id="clickerPrice"
+									>
+										Cost: 100 Donuts
+									</button>
+									<div
+										id="clickerDropContent"
+										class="clickerDropContent"
+									>
+									<!-- Can't Fix Drop Down Button -->
+										<!-- <p id="numAutoCPS">
+										Total Donuts Per Second: 0.00
+									</p> -->
+									</div>
+								</div>
+							</div>
 						</div>
-						<button class="buyMultiplierBtn">Buy Multiplier</button>
 					</div>
 				</div>
 			</main>
 			<footer>
-				<div id="footContainer"></div>
-				<button class="resetGameBtn">Reset Game</button>
+				<div id="footContainer">
+					<button class="resetGameBtn">Reset Game</button>
+				</div>
 			</footer>
 		</div>
 		<script src="./index.js"></script>

@@ -3,25 +3,65 @@ header {
 }
 
 body {
-	background-color: #E9C46A;
+	background-color: #8e9aaf;
 	font-size: 15px;
-
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	color: #264653;
 }
 
+.container {
+	display: flex;
+	text-align: center;
+	margin: 2rem;
+	padding: 1rem;
+	justify-content: space-around;
+	height: 500px;
+	align-items: center;
+	background-color: #cbc0d3;
+	border-radius: 50px;
+}
 
 #myDonuts {
-	text-align: right;
+	font-size: large;
+}
+
+.donuts {
+	flex: 4;
+	background-color: #feeafa;
+	border-radius: 50px;
+	margin: 1rem;
+}
+
+.shops {
+	flex: 3;
+	margin: 1rem;
+	/* padding: 2rem; */
+	background-color: #feeafa;
+	border-radius: 50px;
+	align-content: space-between;
+}
+.shop {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 3rem;
+}
+
+.shop h2 {
+	margin: auto 2rem;
 }
 
 .donutClickerBtn {
-	height: 5rem;
+	height: 180px;
+	width: 180px;
 	background-image: url(/img/donut.jpg);
-	background-size: contain;
+	background-size: 250px;
 	background-repeat: no-repeat;
+	background-position-x: center;
+	border-radius: 90px;
 }
 
 .buyClickerBtn {
@@ -32,27 +72,33 @@ h1, h2, h3 {
 }
 
 .buyMultiplierBtn {
-	margin-top: 2.5rem;
 	height: 5rem;
 	width: 7rem;
 	overflow: auto;
-
 }
 
-.container {
+#myMultipliers {
 	display: flex;
-	text-align: center;
-	justify-content: space-around;
-	height: 500px;
 	align-items: center;
 }
+
+#myClickers {
+	display: flex;
+	align-items: center;
+}
+
+#myColors {
+	display: flex;
+	flex-direction: column;
+}
+
 .dropdown {
 	position: relative;
 	display: inline-block;
 }
 
 .dropBtn {
-	background-color: #2A9D8F;
+	background-color: #cbc0d3;
 	color: white;
 	padding: 1rem;
 	font-size: 16px;
@@ -83,6 +129,44 @@ h1, h2, h3 {
 	display: block;
 }
 
-.dropdown:hover .dropbtn {
+/* .dropdown:hover .dropbtn {
 	background-color: #3e8e41;
+} */
+
+#footContainer {
+	text-align: center;
 }
+
+
+/* Drop Button Not Working  */
+
+
+/* .clickerDrop {
+	position: relative;
+	display: inline-block;
+}
+
+.clickerDropContent {
+	display: none;
+	position: absolute;
+	margin-top: 100px;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.clickerDropContent p {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.clickerDropContent p:hover {
+	background-color: #ddd;
+}
+
+.clickerDrop:hover .clickerDropContent {
+	display: block;
+} */
