@@ -28,10 +28,6 @@ class DonutMaker {
 		return this.donutCount;
 	}
 
-	findClickerCount() {
-		return this.clickerCount;
-	}
-
 	addClicker() {
 		if (this.donutCount >= this.clickerCost) {
 			this.donutCount -= this.clickerCost;
@@ -43,10 +39,6 @@ class DonutMaker {
 		setInterval(() => {
 			this.click();
 		}, 1000);
-	}
-
-	findMultiplierCount() {
-		return this.multiplierCount;
 	}
 
 	addMultiplier() {

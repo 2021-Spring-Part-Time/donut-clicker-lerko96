@@ -18,7 +18,7 @@ describe('1.1 DonutMaker', () => {
 describe('1.2 AutoClicker', () => {
 	test('1.2.1 Does AutoClicker return a count', () => {
 		const underTest = new DonutMaker(100, 0, 100);
-		underTest.findClickerCount();
+		underTest.click();
 		expect(underTest.clickerCount).toEqual(0);
 	});
 
@@ -65,7 +65,7 @@ describe('1.4 Buy AutoClicker', () => {
 describe('2.1 donutMultiplier', () => {
 	test('2.1.1 Can retrieve multiplierCount', () => {
 		const underTest = new DonutMaker(90, 0, 100, 0, 10);
-		underTest.findMultiplierCount();
+		underTest.click();
 		expect(underTest.multiplierCount).toEqual(0);
 	});
 	test('2.1.2 Can add to the multiplierCount', () => {
