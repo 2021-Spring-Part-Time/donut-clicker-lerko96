@@ -3,10 +3,9 @@ header {
 }
 
 body {
-	background-color: #e9c46a;
+	background-color: #8e9aaf;
 	font-size: 15px;
 }
-
 
 h1,
 h2,
@@ -22,7 +21,7 @@ h3 {
 	justify-content: space-around;
 	height: 500px;
 	align-items: center;
-	background-color: #ffffff;
+	background-color: #cbc0d3;
 	border-radius: 50px;
 }
 
@@ -30,24 +29,29 @@ h3 {
 	font-size: large;
 }
 
-
 .donuts {
 	flex: 4;
-	background-color: #f1f1f1;
+	background-color: #feeafa;
 	border-radius: 50px;
 	margin: 1rem;
 }
 
 .shops {
 	flex: 3;
-	margin:1rem;
-	background-color: #f1f1f1;
+	margin: 1rem;
+	/* padding: 2rem; */
+	background-color: #feeafa;
 	border-radius: 50px;
-	align-content: space-around;
+	align-content: space-between;
 }
 .shop {
 	display: flex;
 	justify-content: space-evenly;
+	margin: 3rem;
+}
+
+.shop h2 {
+	margin: auto 2rem;
 }
 
 .donutClickerBtn {
@@ -78,11 +82,10 @@ h3 {
 	align-items: center;
 }
 
-#myClickers{
+#myClickers {
 	display: flex;
-	align-items: center ;
+	align-items: center;
 }
-
 
 #myColors {
 	display: flex;
@@ -95,7 +98,7 @@ h3 {
 }
 
 .dropBtn {
-	background-color: #2a9d8f;
+	background-color: #cbc0d3;
 	color: white;
 	padding: 1rem;
 	font-size: 16px;
@@ -126,10 +129,44 @@ h3 {
 	display: block;
 }
 
-.dropdown:hover .dropbtn {
+/* .dropdown:hover .dropbtn {
 	background-color: #3e8e41;
-}
+} */
 
 #footContainer {
 	text-align: center;
 }
+
+
+/* Drop Button Not Working  */
+
+
+/* .clickerDrop {
+	position: relative;
+	display: inline-block;
+}
+
+.clickerDropContent {
+	display: none;
+	position: absolute;
+	margin-top: 100px;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.clickerDropContent p {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.clickerDropContent p:hover {
+	background-color: #ddd;
+}
+
+.clickerDrop:hover .clickerDropContent {
+	display: block;
+} */

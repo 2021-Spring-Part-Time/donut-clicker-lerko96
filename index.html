@@ -47,10 +47,9 @@
 						<div id="myDonuts">
 							<h1>Donut Clicker</h1>
 							<p id="donutCount">0.00 donuts</p>
-							<p id="clickerValue">
-								donuts made per click: 1.000
-							</p>
-							<p id="cps">clicks per second: 0</p>
+							<p id="clickerValue">1.000 donuts per click</p>
+							<p id="clickerCountOne">0 auto clickers</p>
+							<p id="numAutoCPS">per second: 0</p>
 						</div>
 						<button class="donutClickerBtn"></button>
 					</div>
@@ -58,7 +57,10 @@
 						<div class="shop">
 							<div id="myMultipliers">
 								<h2 id="numMultipliers">Multipliers: 0</h2>
-								<button class="buyMultiplierBtn" id="multiplierPrice">
+								<button
+									class="buyMultiplierBtn"
+									id="multiplierPrice"
+								>
 									Cost: 10 donuts
 								</button>
 							</div>
@@ -66,12 +68,23 @@
 						<div class="shop">
 							<div id="myClickers">
 								<h2 id="numClickers">Auto Clickers: 0</h2>
-								<button class="buyClickerBtn" id="clickerPrice">
-									Cost: 100 Donuts
-								</button>
-								<p id="numAutoCPS">
-									Total Auto Clicker Donuts Per Second: 0
-								</p>
+								<div id="clickerDrop" class="clickerDrop">
+									<button
+										class="buyClickerBtn"
+										id="clickerPrice"
+									>
+										Cost: 100 Donuts
+									</button>
+									<div
+										id="clickerDropContent"
+										class="clickerDropContent"
+									>
+									<!-- Can't Fix Drop Down Button -->
+										<!-- <p id="numAutoCPS">
+										Total Donuts Per Second: 0.00
+									</p> -->
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>

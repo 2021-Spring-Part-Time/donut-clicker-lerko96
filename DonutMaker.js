@@ -6,7 +6,8 @@ class DonutMaker {
 		multiplierCount,
 		multiplierCost,
 		clickValue,
-		cps, autoCPS
+		cps,
+		autoCPS
 	) {
 		this.donutCount = donutCount;
 		this.clickerCount = clickerCount;
