@@ -1,6 +1,5 @@
 import DonutMaker from './DonutMaker';
-const container = document.querySelector('.container'),
-	myContainerDiv = document.getElementById('container');
+const container = document.querySelector('.container');
 
 const donutGame = new DonutMaker(0, 0, 100, 0, 10, 1, 0);
 
@@ -8,9 +7,7 @@ const donutClickerBtn = document.querySelector('.donutClickerBtn'),
 	myDonutsDiv = document.getElementById('myDonuts');
 
 const buyClickerBtn = document.querySelector('.buyClickerBtn'),
-	myClickersDiv = document.getElementById('myClickers'),
-	clickerDropDiv = document.getElementById('clickerDrop'),
-	clickerDropContentDiv = document.getElementById('clickerDropContent');
+	myClickersDiv = document.getElementById('myClickers');
 
 const buyMultiplierBtn = document.querySelector('.buyMultiplierBtn'),
 	myMultipliersDiv = document.getElementById('myMultipliers');
@@ -24,11 +21,11 @@ container.addEventListener('mouseover', () => {
 	donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
 	myDonutsDiv.appendChild(clickerValue);
 	clickerValue.innerText =
-		donutGame.clickValue.toFixed(3) + ' donuts per click';
+		donutGame.clickValue.toFixed(2) + ' donuts per click';
 	myDonutsDiv.appendChild(clickerCountOne);
 	clickerCountOne.innerText = donutGame.clickerCount + ' auto clickers';
 	myDonutsDiv.appendChild(numAutoCPS);
-	numAutoCPS.innerText = 'per second: ' + donutGame.autoCPS.toFixed(3);
+	numAutoCPS.innerText = 'per second: ' + donutGame.autoCPS.toFixed(2);
 });
 
 donutClickerBtn.addEventListener('click', () => {
@@ -37,11 +34,11 @@ donutClickerBtn.addEventListener('click', () => {
 	donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
 	myDonutsDiv.appendChild(clickerValue);
 	clickerValue.innerText =
-		donutGame.clickValue.toFixed(3) + ' donuts per click';
+		donutGame.clickValue.toFixed(2) + ' donuts per click';
 	myDonutsDiv.appendChild(clickerCountOne);
 	clickerCountOne.innerText = donutGame.clickerCount + ' auto clickers';
 	myDonutsDiv.appendChild(numAutoCPS);
-	numAutoCPS.innerText = 'per second: ' + donutGame.autoCPS.toFixed(3);
+	numAutoCPS.innerText = 'per second: ' + donutGame.autoCPS.toFixed(2);
 });
 
 buyClickerBtn.addEventListener('click', () => {
@@ -52,11 +49,11 @@ buyClickerBtn.addEventListener('click', () => {
 		donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
 		myDonutsDiv.appendChild(clickerValue);
 		clickerValue.innerText =
-			donutGame.clickValue.toFixed(3) + ' donuts per click';
+			donutGame.clickValue.toFixed(2) + ' donuts per click';
 		myDonutsDiv.appendChild(clickerCountOne);
 		clickerCountOne.innerText = donutGame.clickerCount + ' auto clickers';
 		myDonutsDiv.appendChild(numAutoCPS);
-		numAutoCPS.innerText = 'per second: ' + donutGame.autoCPS.toFixed(3);
+		numAutoCPS.innerText = 'per second: ' + donutGame.autoCPS.toFixed(2);
 		myClickersDiv.appendChild(numClickers);
 		numClickers.innerText = 'Auto Clickers: ' + donutGame.clickerCount;
 		myClickersDiv.appendChild(clickerPrice);
@@ -77,11 +74,11 @@ buyMultiplierBtn.addEventListener('click', () => {
 		donutCount.innerText = donutGame.donutCount.toFixed(2) + ' donuts';
 		myDonutsDiv.appendChild(clickerValue);
 		clickerValue.innerText =
-			donutGame.clickValue.toFixed(3) + ' donuts per click';
+			donutGame.clickValue.toFixed(2) + ' donuts per click';
 		myDonutsDiv.appendChild(clickerCountOne);
 		clickerCountOne.innerText = donutGame.clickerCount + ' auto clickers';
 		myDonutsDiv.appendChild(numAutoCPS);
-		numAutoCPS.innerText = 'per second: ' + donutGame.autoCPS.toFixed(3);
+		numAutoCPS.innerText = 'per second: ' + donutGame.autoCPS.toFixed(2);
 		myMultipliersDiv.appendChild(numMultipliers);
 		numMultipliers.innerText = 'Multipliers: ' + donutGame.multiplierCount;
 		myMultipliersDiv.appendChild(multiplierPrice);
