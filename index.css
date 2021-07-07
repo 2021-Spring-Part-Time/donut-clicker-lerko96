@@ -129,6 +129,16 @@ h3 {
 	display: block;
 }
 
+.dropContent a {
+	color: #000000;
+	text-decoration: none;
+	line-height: 1.5;
+}
+
+.dropContent a:hover {
+	border-bottom: 1px solid black;
+}
+
 .dropContent p:hover {
 	background-color: #ddd;
 }
@@ -139,4 +149,14 @@ h3 {
 
 #footContainer {
 	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.donuts {
+		min-width: 350px;
+	}
 }
