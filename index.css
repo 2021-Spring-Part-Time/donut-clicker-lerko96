@@ -1,0 +1,162 @@
+header {
+	text-align: center;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: #8e9aaf;
+	font-size: 15px;
+	line-height: 1.15;
+}
+
+h1,
+h2,
+h3 {
+	color: #264653;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 50px;
+}
+
+#donutCount {
+	font-weight: 600;
+	font-size: 2rem;
+}
+
+.title {
+	background-color: #feeafa;
+	border-radius: 50px;
+	margin: 2rem;
+	padding: 1rem;
+	text-align: center;
+}
+
+.donuts {
+	flex: 4;
+	background-color: #feeafa;
+	border-radius: 50px;
+	margin: 2rem;
+	padding: 1rem;
+}
+
+.shops {
+	flex: 3;
+	margin: 2rem;
+	padding: 1rem;
+	background-color: #feeafa;
+	border-radius: 50px;
+}
+.shop {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 2rem;
+}
+
+.shop h2 {
+	margin: auto 2rem;
+}
+
+.donutClickerBtn {
+	height: 180px;
+	width: 180px;
+	background-image: url(/img/donut.jpg);
+	background-size: 250px;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	border-radius: 90px;
+}
+
+.buyClickerBtn {
+	margin-top: 2.5rem;
+	height: 5rem;
+	width: 7rem;
+	overflow: auto;
+}
+
+.buyMultiplierBtn {
+	height: 5rem;
+	width: 7rem;
+	overflow: auto;
+}
+
+#myMultipliers {
+	display: flex;
+	align-items: center;
+}
+
+#myClickers {
+	display: flex;
+	align-items: center;
+}
+
+#myColors {
+	display: flex;
+	flex-direction: column;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropBtn {
+	background-color: #cbc0d3;
+	color: white;
+	padding: 1rem;
+	font-size: 16px;
+	border: none;
+}
+
+.dropContent {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropContent p {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropContent a {
+	color: #000000;
+	text-decoration: none;
+	line-height: 1.5;
+}
+
+.dropContent a:hover {
+	border-bottom: 1px solid black;
+}
+
+.dropContent p:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropContent {
+	display: block;
+}
+
+#footContainer {
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.donuts {
+		min-width: 350px;
+	}
+}

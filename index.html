@@ -1,13 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donut Clicker</title>
-  </head>
-  <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<title>Donut Clicker</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="dropdown">
+					<button class="dropBtn">Contact</button>
+					<div class="dropContent">
+						<p>
+							Fred the Baker Baking Company <br />
+							1234 drury lane <br />
+							216-248-2482 <br />
+						</p>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropBtn">About Company</button>
+					<div class="dropContent">
+						<p>
+							Created in 1945 by the muffin man <br />
+							only wanting the seweetest baked goods,
+							<br />
+							muffin man has a problem with cavities.
+						</p>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropBtn">About Dev</button>
+					<div class="dropContent">
+						<p>
+							<a href="https://github.com/lerko96" target="_blank"
+								>GitHub</a
+							><br />
+							<a
+								href="https://www.linkedin.com/in/tyler-koenig/"
+								target="_blank"
+								>LinkedIn</a
+							>
+						</p>
+					</div>
+				</div>
+			</header>
+			<main>
+				<div class="title">
+					<h1>Donut Clicker</h1>
+				</div>
+				<div class="container">
+					<div class="donuts">
+						<div id="myDonuts">
+							<p id="donutCount">0.00 donuts</p>
+							<p id="clickerValue">1.00 donuts per click</p>
+							<p id="clickerCountOne">0 auto clickers</p>
+							<p id="numAutoCPS">per second: 0</p>
+						</div>
+						<button class="donutClickerBtn"></button>
+					</div>
+					<div class="shops">
+						<div class="shop">
+							<div id="myMultipliers">
+								<h2 id="numMultipliers">Multipliers: 0</h2>
+								<button
+									class="buyMultiplierBtn"
+									id="multiplierPrice"
+								>
+									Cost: 10 donuts
+								</button>
+							</div>
+						</div>
+						<div class="shop">
+							<div id="myClickers">
+								<h2 id="numClickers">Auto Clickers: 0</h2>
+								<div id="clickerDrop" class="clickerDrop">
+									<button
+										class="buyClickerBtn"
+										id="clickerPrice"
+									>
+										Cost: 100 Donuts
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer>
+				<div id="footContainer">
+					<button class="resetGameBtn">Reset Game</button>
+				</div>
+			</footer>
+		</div>
+		<script src="./index.js"></script>
+	</body>
 </html>
